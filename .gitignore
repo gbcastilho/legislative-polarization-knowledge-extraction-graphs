@@ -1,3 +1,6 @@
+# Imported raw CSV files
+# data/raw/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
