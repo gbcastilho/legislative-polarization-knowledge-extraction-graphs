@@ -1,5 +1,6 @@
 # Imported raw CSV files
-# data/raw/
+data/raw/*
+!data/raw/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
