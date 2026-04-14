@@ -1,0 +1,8 @@
+services:
+  database:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: db/Dockerfile
+     
