@@ -4,6 +4,7 @@ data/raw/*
 
 # DuckDB database file
 *.duckdb
+*.duckdb.wal
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
