@@ -4,7 +4,7 @@ WORKDIR /app
 
 ## Build
 RUN python -m venv ./.venv
-COPY requirements.txt .
+COPY db/requirements.txt .
 RUN pip install -r requirements.txt
 
 RUN mkdir -p data/raw
