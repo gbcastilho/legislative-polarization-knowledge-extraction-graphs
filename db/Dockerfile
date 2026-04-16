@@ -1,12 +1,13 @@
 FROM python:3.13-trixie
 
+WORKDIR /app
+
 ## Build
 RUN python -m venv ./.venv
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-RUN mkdir data
-RUN mkdir data/raw
+RUN mkdir -p data/raw
 
 ## Run
 COPY db/ ./db/

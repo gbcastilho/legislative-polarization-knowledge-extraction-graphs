@@ -5,8 +5,10 @@ from pathlib import Path
 
 load_dotenv()
 
-output_dir = os.getenv("LEGISLATIVE_FILES_OUTPUT_DIR")
-assert output_dir is not None, "Variable 'LEGISLATIVE_FILES_OUTPUT_DIR' must be defined"
+output_path = os.getenv("LEGISLATIVE_FILES_OUTPUT_PATH")
+assert (
+    output_path is not None
+), "Variable 'LEGISLATIVE_FILES_OUTPUT_PATH' must be defined"
 
 years_list = os.getenv("IMPORTING_YEARS")
 assert years_list is not None, "Variable 'IMPORTING_YEARS' must be defined"
@@ -14,7 +16,7 @@ assert years_list is not None, "Variable 'IMPORTING_YEARS' must be defined"
 years = years_list.split(",")
 
 # Initialize path manager
-p = Path(f"./{output_dir}")
+p = Path(f"./{output_path}")
 
 CHAMBER_FILES_URL = "https://dadosabertos.camara.leg.br/arquivos"
 

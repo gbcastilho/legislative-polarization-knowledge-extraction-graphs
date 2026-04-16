@@ -5,14 +5,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-data_dir = os.getenv("LEGISLATIVE_FILES_OUTPUT_DIR")
-assert data_dir is not None, "Variable 'LEGISLATIVE_FILES_OUTPUT_DIR' must be defined"
+data_path = os.getenv("LEGISLATIVE_FILES_OUTPUT_PATH")
+assert data_path is not None, "Variable 'LEGISLATIVE_FILES_OUTPUT_PATH' must be defined"
 
-con = duckdb.connect("./.duckdb")
+duckdb_path = os.getenv("DUCKDB_PATH")
+assert duckdb_path is not None, "Variable 'DUCKDB_PATH' must be defined"
+
+con = duckdb.connect(duckdb_path)
 
 
 def create_deputies_table():
-    deputies_files_path = f"./{data_dir}/deputados.csv"
+    deputies_files_path = f"./{data_path}/deputados.csv"
 
     con.execute("DROP TABLE IF EXISTS deputados;")
 
@@ -25,7 +28,7 @@ def create_deputies_table():
 
 
 def create_theme_prepositions_table():
-    theme_prepositions_files_path = f"./{data_dir}/proposicoesTemas*.csv"
+    theme_prepositions_files_path = f"./{data_path}/proposicoesTemas*.csv"
 
     con.execute("DROP TABLE IF EXISTS proposicoesTemas;")
 
@@ -44,7 +47,7 @@ def create_theme_prepositions_table():
 
 
 def create_deputies_votes_table():
-    deputies_votes_files_path = f"./{data_dir}/votacoesVotos*.csv"
+    deputies_votes_files_path = f"./{data_path}/votacoesVotos*.csv"
 
     con.execute("DROP TABLE IF EXISTS votacoesVotos;")
 
@@ -57,7 +60,7 @@ def create_deputies_votes_table():
 
 
 def create_object_polls_table():
-    object_polls_files_path = f"./{data_dir}/votacoesObjetos*.csv"
+    object_polls_files_path = f"./{data_path}/votacoesObjetos*.csv"
 
     con.execute("DROP TABLE IF EXISTS votacoesObjetos;")
 

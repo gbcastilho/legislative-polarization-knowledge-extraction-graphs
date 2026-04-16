@@ -3,7 +3,7 @@ data/raw/*
 !data/raw/.gitkeep
 
 # DuckDB database file
-.duckdb
+*.duckdb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
