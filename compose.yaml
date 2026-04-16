@@ -8,3 +8,15 @@ services:
     volumes:
       - ./data:/data
      
+  analysis:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: analysis/Dockerfile
+    volumes:
+      - ./data:/data
+      - ./analysis/queries:/home/jovyan/work/queries
+      - ./analysis/notebooks:/home/jovyan/work/notebooks
+    ports:
+      - 8888:8888
