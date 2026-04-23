@@ -1,6 +1,6 @@
 SELECT
-  vo.proposicao_id,
-  vv.deputado_id,
+  CONCAT('p_', vo.proposicao_id) AS proposicao_id,
+  CONCAT('d_', vv.deputado_id) AS deputado_id,
   vv.voto
 FROM
   votacoesVotos vv
