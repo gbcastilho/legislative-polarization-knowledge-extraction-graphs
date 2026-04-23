@@ -18,5 +18,6 @@ services:
       - ./data:/data
       - ./analysis/queries:/home/jovyan/work/queries
       - ./analysis/notebooks:/home/jovyan/work/notebooks
+      - ./analysis/graphs:/home/jovyan/work/graphs
     ports:
       - 8888:8888
