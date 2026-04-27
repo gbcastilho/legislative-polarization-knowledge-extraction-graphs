@@ -8,6 +8,8 @@ In short, it:
 2. Loads them into a DuckDB database.
 3. Provides a Jupyter notebook to run SQL queries and build vote graphs with NetworkX.
 
+In case you only want to access the used dataset, it is available on [Mendeley Data](https://data.mendeley.com/datasets/5yv2v3ppzj/1).
+
 ## Quick Run (Docker)
 
 ### 1. Configure environment
