@@ -48,6 +48,6 @@ docker compose down
 
 - Database: [data/legislative.duckdb](data/legislative.duckdb)
 - Raw CSV files: [data/raw](data/raw)
-- Notebook: [analysis/notebooks/analysis.ipynb](analysis/notebooks/analysis.ipynb)
+- Notebooks: [analysis/notebooks/analysis.ipynb](analysis/notebooks)
 - SQL queries: [analysis/queries](analysis/queries)
 - Exported graphs: [analysis/graphs](analysis/graphs)
